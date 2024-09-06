@@ -319,12 +319,17 @@ require('lazy').setup({
       require('which-key').setup()
 
       -- Document existing key chains
-      require('which-key').register {
-        ['<leader>c'] = { name = '[C]ode', _ = 'which_key_ignore' },
-        ['<leader>d'] = { name = '[D]ocument', _ = 'which_key_ignore' },
-        ['<leader>r'] = { name = '[R]ename', _ = 'which_key_ignore' },
-        ['<leader>s'] = { name = '[S]earch', _ = 'which_key_ignore' },
-        ['<leader>w'] = { name = '[W]orkspace', _ = 'which_key_ignore' },
+      require('which-key').add {
+        { '', group = '[C]ode' },
+        { '', desc = '<leader>r_', hidden = true },
+        { '', group = '[S]earch' },
+        { '', desc = '<leader>s_', hidden = true },
+        { '', group = '[W]orkspace' },
+        { '', group = '[R]ename' },
+        { '', group = '[D]ocument' },
+        { '', desc = '<leader>d_', hidden = true },
+        { '', desc = '<leader>c_', hidden = true },
+        { '', desc = '<leader>w_', hidden = true },
       }
     end,
   },
@@ -588,9 +593,6 @@ require('lazy').setup({
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
         --    https://github.com/pmizio/typescript-tools.nvim
-        --
-        -- But for many setups, the LSP (`tsserver`) will work just fine
-        tsserver = {},
         --
 
         lua_ls = {
