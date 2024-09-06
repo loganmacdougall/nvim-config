@@ -192,8 +192,8 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower win
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- Custom
-vim.keymap.set('n', '<S-A-Down>', ':m+1<cr>', { desc = 'Swap line with line below' })
-vim.keymap.set('n', '<S-A-Up>', ':m-2<cr>', { desc = 'Swap line with line above' })
+vim.keymap.set('n', '<A-Down>', '<Cmd>m+1<CR>', { desc = 'Swap line with line below' })
+vim.keymap.set('n', '<A-Up>', '<Cmd>m-2<CR>', { desc = 'Swap line with line above' })
 vim.keymap.set('n', 'Y', 'yy', { desc = 'Copy entire line' })
 
 -- Auto file runner
