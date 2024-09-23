@@ -244,7 +244,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- Add spellcheck to my files
-vim.opt.apelllang = 'en_us'
+vim.opt.spelllang = 'en_us'
 vim.opt.spell = true
 
 -- [[ Install `lazy.nvim` plugin manager ]]
